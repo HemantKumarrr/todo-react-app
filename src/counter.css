@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+font-family: 'Roboto', sans-serif;
 }
 
 .container{
     height: 100vh;
     background: #900C3F;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container> h1{
+    padding: 1rem;
+    color: #fefefe;
+    font-size: 2.5rem;
+    letter-spacing: 0.6rem;
+    margin: 1.5rem 0;
 }
 
 .box{
@@ -25,7 +38,7 @@
     padding: 1rem;
 }
 
-h1{
+.display{
     color: #fefefe;
     font-size: 2.8rem;
     margin: 2rem;
@@ -49,7 +62,7 @@ button:hover{
     background: #F8DE22;
 }
 
-h1::before{
+.display::before{
     content: '';
     display: block;
     position: absolute;
@@ -57,7 +70,7 @@ h1::before{
     right: 0;
     left: 0;
     bottom: 0;
-    background: #272829;
+    background: #982176;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -65,7 +78,7 @@ h1::before{
     border-radius: 1rem;
 }
 
-h1:hover::before{
+.display:hover::before{
     transform: scaleX(1);
     transform-origin: right;
 }

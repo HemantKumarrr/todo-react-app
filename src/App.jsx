@@ -1,9 +1,9 @@
-import Navbar from "./Navbar";
+import Counter from "./Counter"
 
 function App() {
   return (
     <>
-    <Navbar />
+    <Counter />
     </>
   )
 }
