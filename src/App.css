@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-div{
+    height: 100vh;
+    background: #96B6C5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child-div{
+    scroll-behavior: smooth;
+    overflow: hidden;
+    padding: 2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 30rem;
+    background: #EEE0C9;
+    border-radius: 2rem;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+
+}
+figure{
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.addItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.addItems input[type="text"]{
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 2rem 0 0 2rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    font-family: monospace;
+
+}
+.addItems i {
+    background: #fefefe;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    border-radius: 0 2rem 2rem 0;
+    cursor: pointer;
+}
+
+
+.showItems{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.eachItem{
+    font-family: monospace;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 1rem;
+    height: 2rem;
+    padding: 0 1rem;
+    margin-top: 1rem ;
+    border: 1px solid #242424;
+    position: relative;
+    z-index: 1;
+}
+
+.eachItem i{
+    cursor: pointer;
+}
+
+.eachItem i:hover{
+    color: red;
+}
+
+.eachItem::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #242424;
+    border-radius: 1rem;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.eachItem:hover::before{
+
+    border-radius: 1rem;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.eachItem:hover{
+    color: #fefefe;
+}
